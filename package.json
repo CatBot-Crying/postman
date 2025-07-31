@@ -1,5 +1,5 @@
 {
-  "name": "postman",
+  "name": "password-generator-th",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,5 @@
   "devDependencies": {
     "vite": "^7.0.4"
   },
-  "dependencies": {
-    "highlight.js": "^11.11.1"
-  }
+  "dependencies": {}
 }

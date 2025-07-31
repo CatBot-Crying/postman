@@ -1,13 +1,53 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>โปรแกรมสร้างรหัสผ่าน</title>
+    <!-- เพิ่มฟอนต์ภาษาไทยสวยๆ (Sarabun) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="container">
+      <h1>โปรแกรมสร้างรหัสผ่าน</h1>
+
+      <div class="result-container">
+        <input type="text" id="resultEl" readonly placeholder="รหัสผ่านจะแสดงที่นี่" />
+        <button class="btn" id="copyBtn">คัดลอก</button>
+      </div>
+
+      <div class="settings">
+        <div class="setting">
+          <label for="lengthEl">ความยาวรหัสผ่าน</label>
+          <div>
+            <input type="range" id="lengthEl" min="8" max="32" value="16" />
+            <span id="lengthValue">16</span>
+          </div>
+        </div>
+        <div class="setting">
+          <label for="uppercaseEl">รวมตัวอักษรพิมพ์ใหญ่ (A-Z)</label>
+          <input type="checkbox" id="uppercaseEl" checked />
+        </div>
+        <div class="setting">
+          <label for="lowercaseEl">รวมตัวอักษรพิมพ์เล็ก (a-z)</label>
+          <input type="checkbox" id="lowercaseEl" checked />
+        </div>
+        <div class="setting">
+          <label for="numbersEl">รวมตัวเลข (0-9)</label>
+          <input type="checkbox" id="numbersEl" checked />
+        </div>
+        <div class="setting">
+          <label for="symbolsEl">รวมสัญลักษณ์ (!@#$%...)</label>
+          <input type="checkbox" id="symbolsEl" checked />
+        </div>
+      </div>
+
+      <button class="btn btn-large" id="generateBtn">สร้างรหัสผ่าน</button>
+    </div>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
